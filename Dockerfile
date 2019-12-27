@@ -1,7 +1,5 @@
-FROM openjdk:8-jdk
+FROM tomcat:8.0
 
-RUN rm -rf /usr/local/tomcat/webapps/*
-
-COPY ./target/DockerSpring.war /usr/local/tomcat/webapps/DockerSpring.war
+COPY ./target/DockerSpring.war /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
 
